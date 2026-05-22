@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Proof of Meaning is a proof layer for AI-to-AI communication, turning machine messages into verifiable meaning.">
+    <title>Proof of Meaning</title>
+    <link rel="icon" type="image/png" href="site/assets/pom-logo.png">
+    <link rel="apple-touch-icon" href="site/assets/pom-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;750&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="site/styles.css">
+  </head>
+  <body>
+    <div class="site-frame">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="Proof of Meaning home">
+          <img class="brand-mark" src="site/assets/pom-logo.png" alt="" aria-hidden="true">
+          <span>Proof of Meaning</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="#product">Product</a>
+          <a href="#language">Language</a>
+          <a href="#runtime">Runtime</a>
+          <a href="#docs">Docs</a>
+        </nav>
+        <a class="nav-action" href="https://github.com/pom-protocol/pom">GitHub</a>
+      </header>
+
+      <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
+          <a class="release-pill" href="docs/manifesto.md">
+            <span>Developer MVP</span>
+            <strong>Read the manifesto</strong>
+          </a>
+          <h1 id="hero-title">The proof layer for AI-to-AI communication</h1>
+          <p class="hero-subtitle">
+            POM turns machine messages into verifiable meaning with semantic packets,
+            proof envelopes, P2 transport, and a proof-first agent runtime.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#product">Explore product</a>
+            <a class="button secondary" href="https://github.com/pom-protocol/pom">View repository</a>
+          </div>
+        </section>
+
+        <section id="product" class="product-stage" aria-label="POM product interface preview">
+          <div class="app-window" data-view="trace">
+            <aside class="app-sidebar">
+              <div class="sidebar-brand">
+                <img src="site/assets/pom-logo.png" alt="" aria-hidden="true">
+                <span>POM Runtime</span>
+                <button type="button" aria-label="New proof packet">+</button>
+              </div>
+              <nav class="sidebar-nav" aria-label="Runtime modules">
+                <button class="active" type="button" data-view-target="trace"><span>01</span>Proof trace</button>
+                <button type="button" data-view-target="transport"><span>02</span>P2 transport</button>
+                <button type="button" data-view-target="agents"><span>03</span>Agent lane</button>
+                <button type="button" data-view-target="ledger"><span>04</span>Ledger</button>
+              </nav>
+              <div class="sidebar-group">
+                <span>Sessions</span>
+                <button class="is-selected" type="button" data-view-target="trace">Door state verification</button>
+                <button type="button" data-view-target="transport">Semantic transport batch</button>
+                <button type="button" data-view-target="agents">Runtime coordination</button>
+              </div>
+              <div class="sidebar-status">
+                <span>batch root</span>
+                <strong>b:3Ap4N2Mg</strong>
+              </div>
+            </aside>
+
+            <div class="workbench">
+              <header class="workbench-top">
+                <div>
+                  <span>pom-241</span>
+                  <strong>Door state verification</strong>
+                </div>
+                <div class="toolbar-actions">
+                  <button type="button" data-view-target="trace">Trace</button>
+                  <button type="button" data-view-target="transport">P2</button>
+                  <button type="button" data-view-target="ledger">Verify</button>
+                </div>
+              </header>
+
+              <section class="workspace-panel view-panel is-active" data-view="trace">
+                <div class="issue-head">
+                  <div>
+                    <span>Controlled English</span>
+                    <h3>Verify door state from scout observation</h3>
+                  </div>
+                  <strong>91%</strong>
+                </div>
+                <p class="issue-copy">Agent scout asserts that door is open based on camera 12 at 14:03. Observe next. Context room A.</p>
+                <div class="activity-feed">
+                  <div><span></span><p><strong>compiler</strong> normalized input into canonical meaning.</p></div>
+                  <div><span></span><p><strong>verifier</strong> issued proof-bound response packet rt-001.</p></div>
+                  <div><span></span><p><strong>router</strong> forwarded verified meaning to downstream-agent.</p></div>
+                  <div><span></span><p><strong>batch</strong> committed 3 packets into root b:3Ap4N2Mg.</p></div>
+                </div>
+              </section>
+
+              <section class="workspace-panel view-panel" data-view="transport">
+                <div class="transport-editor">
+                  <div><span>P1</span><code>P1 $p-001 @scout !a door=open ^camera-12%4014%3A03 %91 ~obs #room=A</code></div>
+                  <div class="selected"><span>P2</span><code>P2|rt-000|scout|a|door|%3D|open|camera-12%4014%3A03|91|obs|room=A|||</code></div>
+                  <div><span>Envelope</span><code>{ proof: "pom:v1", transport: "verified", attestations: [] }</code></div>
+                </div>
+              </section>
+
+              <section class="workspace-panel view-panel" data-view="agents">
+                <div class="agent-map">
+                  <div><span>ingress</span><strong>rt-000</strong><p>compile controlled English</p></div>
+                  <div><span>verifier</span><strong>rt-001</strong><p>meaning hash checked</p></div>
+                  <div><span>router</span><strong>rt-002</strong><p>verified meaning routed</p></div>
+                </div>
+              </section>
+
+              <section class="workspace-panel view-panel" data-view="ledger">
+                <div class="ledger-list">
+                  <div><span>meaningHash</span><strong>m:NSnTRFAeh_hOOmVPwf5Hz1F5</strong></div>
+                  <div><span>packetHash</span><strong>p:VyCgTgOcLOLFgVphGXK_XpWi</strong></div>
+                  <div><span>conflicts</span><strong>none</strong></div>
+                  <div><span>inclusionProof</span><strong>valid</strong></div>
+                </div>
+              </section>
+            </div>
+
+            <aside class="inspector">
+              <div class="inspector-head">
+                <span>Proof Inspector</span>
+                <button type="button" aria-label="Close inspector">×</button>
+              </div>
+              <div class="proof-summary">
+                <div><span>Status</span><strong>verified</strong></div>
+                <div><span>Transport</span><strong>P2</strong></div>
+                <div><span>Runtime</span><strong>pom-runtime:v1</strong></div>
+              </div>
+              <div class="inspector-log">
+                <p><strong>compiler</strong> parsed speech act <code>assert</code></p>
+                <p><strong>ledger</strong> found no direct conflict in room=A</p>
+                <p><strong>batch</strong> generated inclusion proof for rt-000</p>
+              </div>
+              <label class="message-box">
+                <span>Message verifier...</span>
+                <input value="prove latest packet" aria-label="Message verifier">
+              </label>
+            </aside>
+          </div>
+        </section>
+
+        <section class="manifesto">
+          <p>AI systems do not need more chat.</p>
+          <h2>They need verifiable meaning.</h2>
+        </section>
+
+        <section class="metrics">
+          <div><span>Language surfaces</span><strong>P1 / P2</strong></div>
+          <div><span>P2 savings over English</span><strong>34.7%</strong></div>
+          <div><span>Runtime transport</span><strong>P2</strong></div>
+          <div><span>Proof root</span><strong>batch:v1</strong></div>
+        </section>
+
+        <section id="language" class="feature-block">
+          <div class="feature-copy">
+            <p class="module-number">1.0 Language</p>
+            <h2>A compact language surface for machine meaning.</h2>
+            <p>P1 keeps packets readable for developers. P2 removes ceremony and uses fixed slots for internal agent transport.</p>
+          </div>
+          <div class="feature-ui code-comparison">
+            <div>
+              <span>P1</span>
+              <code>P1 $p-001 @scout !a door=open ^camera-12%4014%3A03 %91 ~obs #room=A</code>
+            </div>
+            <div class="selected">
+              <span>P2</span>
+              <code>P2|p-001|scout|a|door|%3D|open|camera-12%4014%3A03|91|obs|room=A|||</code>
+            </div>
+          </div>
+        </section>
+
+        <section class="feature-block flip">
+          <div class="feature-copy">
+            <p class="module-number">2.0 Prove</p>
+            <h2>Every message becomes a proof-bound packet.</h2>
+            <p>Meaning hashes, packet hashes, attestations, and batch roots make agent communication inspectable and replayable.</p>
+          </div>
+          <div class="feature-ui proof-list">
+            <div><span>proof</span><strong>pom:v1</strong></div>
+            <div><span>meaningHash</span><strong>m:NSnTRFAeh_hOOmVP</strong></div>
+            <div><span>packetHash</span><strong>p:VyCgTgOcLOLFgVph</strong></div>
+            <div><span>batchRoot</span><strong>b:3Ap4N2MgNd62lmOf</strong></div>
+          </div>
+        </section>
+
+        <section id="runtime" class="feature-block">
+          <div class="feature-copy">
+            <p class="module-number">3.0 Runtime</p>
+            <h2>Agents coordinate through proof-first transport.</h2>
+            <p>The runtime compiles ingress text, moves packets through P2, verifies meaning, and commits the session into a batch proof root.</p>
+          </div>
+          <div class="feature-ui runtime-table">
+            <div><span>01</span><strong>ingress</strong><p>compile controlled English</p></div>
+            <div><span>02</span><strong>verifier</strong><p>issue proof-bound response</p></div>
+            <div><span>03</span><strong>router</strong><p>forward verified meaning</p></div>
+          </div>
+        </section>
+
+        <section id="docs" class="docs-block">
+          <div class="section-heading">
+            <p class="module-number">4.0 Protocol Docs</p>
+            <h2>The narrative is part of the protocol surface.</h2>
+          </div>
+          <div class="docs-grid">
+            <a href="docs/manifesto.md"><span>Manifesto</span><strong>Why POM exists</strong><p>AI systems do not need more chat. They need verifiable meaning.</p></a>
+            <a href="docs/whitepaper-lite.md"><span>Whitepaper Lite</span><strong>The proof layer</strong><p>Problem, solution, architecture, and protocol direction.</p></a>
+            <a href="docs/agent-transcript.md"><span>Transcript</span><strong>Agent-native workflow</strong><p>From controlled English to P2 transport and batch proof.</p></a>
+            <a href="docs/roadmap.md"><span>Roadmap</span><strong>Open protocol path</strong><p>Runtime expansion, proof network, and v1.0 target.</p></a>
+          </div>
+        </section>
+
+        <section class="roadmap-block">
+          <div class="roadmap-line">
+            <div><span>v0.1</span><strong>Working MVP</strong></div>
+            <div><span>v0.2</span><strong>Runtime expansion</strong></div>
+            <div><span>v0.3</span><strong>Proof network</strong></div>
+            <div><span>v1.0</span><strong>Open protocol</strong></div>
+          </div>
+        </section>
+
+        <section id="sdk" class="sdk-block">
+          <div class="section-heading">
+            <p class="module-number">5.0 SDK</p>
+            <h2>Import, compile, prove, verify.</h2>
+          </div>
+          <div class="sdk-card">
+            <pre><code>import { compile, prove, verify } from "pom-protocol";
+
+const packet = compile(input);
+const envelope = prove(packet);
+const result = verify(packet, envelope);</code></pre>
+          </div>
+        </section>
+
+        <section class="cta">
+          <p>Not just messages.</p>
+          <h2>Proof of Meaning.</h2>
+          <a class="button primary" href="https://github.com/pom-protocol/pom">Build with POM</a>
+        </section>
+      </main>
+    </div>
+
+    <script src="site/app.js"></script>
+  </body>
+</html>

@@ -153,6 +153,14 @@ The compiler supports packet references:
 Agent scout asserts that door is open based on camera 12 at 14:03 with 91% confidence. Observe next. Context room A. Responds to p-001. Depends on p-root. Conflicts with p-zed.
 ```
 
+## Docs
+
+- [POM Manifesto](./docs/manifesto.md)
+- [Whitepaper Lite](./docs/whitepaper-lite.md)
+- [Roadmap](./docs/roadmap.md)
+- [Agent Transcript](./docs/agent-transcript.md)
+- [POM Language](./docs/pom-language.md)
+
 ## Why It Is Different
 
 Most agent message formats optimize representation. POM optimizes verification:
