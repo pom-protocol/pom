@@ -166,16 +166,37 @@
           <div class="feature-copy">
             <p class="module-number">1.0 Language</p>
             <h2>A compact language surface for machine meaning.</h2>
-            <p>P1 keeps packets readable for developers. P2 removes ceremony and uses fixed slots for internal agent transport.</p>
+            <p>P1 and P2 define the language. The CLI shows how builders compile, prove, and verify meaning without leaving the protocol surface.</p>
           </div>
-          <div class="feature-ui code-comparison">
-            <div>
-              <span>P1</span>
-              <code>P1 $p-001 @scout !a door=open ^camera-12%4014%3A03 %91 ~obs #room=A</code>
+          <div class="feature-ui language-console">
+            <div class="code-comparison compact">
+              <div>
+                <span>P1</span>
+                <code>P1 $p-001 @scout !a door=open ^camera-12%4014%3A03 %91 ~obs #room=A</code>
+              </div>
+              <div class="selected">
+                <span>P2</span>
+                <code>P2|p-001|scout|a|door|%3D|open|camera-12%4014%3A03|91|obs|room=A|||</code>
+              </div>
             </div>
-            <div class="selected">
-              <span>P2</span>
-              <code>P2|p-001|scout|a|door|%3D|open|camera-12%4014%3A03|91|obs|room=A|||</code>
+            <div class="terminal-window embedded" aria-label="POM CLI terminal preview">
+              <div class="terminal-top">
+                <span>pomai.xyz</span>
+                <strong>runtime shell</strong>
+              </div>
+              <pre><code><span class="prompt">pom@runtime:~$</span> pom compile "Agent scout asserts that door equals open based on camera 12 at 14:03 with 91% confidence. Observe next. Context room A."
+<span class="output">english</span>      door equals open · camera 12@14:03 · 91%
+<span class="output">P1</span>           P1 $p-001 @scout !assert door=open ^camera:12@14:03 %91 ~observe #room=A
+<span class="output">P2</span>           P2|p-001|scout|a|door|%3D|open|camera-12%4014%3A03|91|obs|room=A|||
+
+<span class="prompt">pom@runtime:~$</span> pom compile "Agent verifier asserts that door meaning equals verified based on p-001 with 87% confidence. Notify next. Responds to p-001. Context room A."
+<span class="output">P1</span>           P1 $p-002 @verifier &p-001 !assert door-meaning=verified ^p-001 %87 ~notify #room=A
+<span class="output">P2</span>           P2|p-002|verifier|a|door-meaning|%3D|verified|p-001|87|ntf|room=A|p-001||
+
+<span class="prompt">pom@runtime:~$</span> pom prove --batch latest
+<span class="output">meaningHash</span>  m:NSnTRFAeh_hOOmVPwf5Hz1F5
+<span class="output">batchRoot</span>    b:3Ap4N2MgNd62lmOf
+<span class="cursor">_</span></code></pre>
             </div>
           </div>
         </section>
