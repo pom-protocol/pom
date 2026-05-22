@@ -1,0 +1,29 @@
+{
+  "name": "pom-protocol",
+  "version": "0.1.0",
+  "description": "Proof of Meaning protocol prototype for verifiable AI-to-AI communication.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "bin": {
+    "pom": "./src/cli.js"
+  },
+  "scripts": {
+    "demo": "node src/demo.js",
+    "bench": "node src/benchmark.js",
+    "compile": "node src/cli.js compile",
+    "cli": "node src/cli.js",
+    "runtime": "node src/runtime-demo.js",
+    "check": "node src/selftest.js"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "protocol",
+    "meaning",
+    "proof"
+  ],
+  "license": "UNLICENSED"
+}
