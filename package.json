@@ -16,6 +16,8 @@
     "compile": "node src/cli.js compile",
     "cli": "node src/cli.js",
     "runtime": "node src/runtime-demo.js",
+    "fixture": "node -e \"import('node:fs').then(fs=>console.log(fs.readFileSync('examples/runtime-session.json','utf8')))\"",
+    "release:notes": "node -e \"import('node:fs').then(fs=>console.log(fs.readFileSync('docs/release-notes-v0.1.0.md','utf8')))\"",
     "check": "node src/selftest.js"
   },
   "keywords": [

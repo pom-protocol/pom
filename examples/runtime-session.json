@@ -1,0 +1,27 @@
+{
+  "runtime": "pom-runtime:v1",
+  "transport": "P2",
+  "input": "Agent scout asserts that door is open based on camera 12 at 14:03 with 91% confidence. Observe next. Context room A.",
+  "hops": [
+    {
+      "actor": "ingress",
+      "packet": "rt-000",
+      "transport": "P2|rt-000|scout|a|door|%3D|open|camera-12%4014%3A03|91|obs|room=A|||",
+      "meaningHash": "m:NSnTRFAeh_hOOmVPwf5Hz1F5"
+    },
+    {
+      "actor": "verifier",
+      "packet": "rt-001",
+      "transport": "P2|rt-001|verifier|a|door-meaning|%3D|verified|rt-000|87|ntf|room=A|rt-000||",
+      "meaningHash": "m:sFCsStDYD2oPm1hNKbJi8B4K"
+    },
+    {
+      "actor": "router",
+      "packet": "rt-002",
+      "transport": "P2|rt-002|router|c|meaning|-%3E|downstream-agent|rt-001|79|ast|room=A||rt-001|",
+      "meaningHash": "m:bqByrwVwB8_EBjW_hBg0pumG"
+    }
+  ],
+  "batchRoot": "b:3Ap4N2MgNd62lmOftyvvCxn3",
+  "conflicts": []
+}

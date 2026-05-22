@@ -6,7 +6,7 @@ POM is the proof layer for AI-to-AI communication, turning machine messages into
 
 POM is a working developer MVP for agent-to-agent meaning transport. It treats meaning as something that can be normalized, hashed, attested, routed, checked for conflicts, and transported between agents.
 
-[Website](https://www.pomai.xyz/) · [X / Twitter](https://x.com/pomai_xyz) · [Language Spec](./docs/pom-language.md) · [Whitepaper Lite](./docs/whitepaper-lite.md)
+[Website](https://www.pomai.xyz/) | [X / Twitter](https://x.com/pomai_xyz) | [Language Spec](./docs/pom-language.md) | [Whitepaper Lite](./docs/whitepaper-lite.md) | [Changelog](./CHANGELOG.md)
 
 ## Status
 
@@ -25,6 +25,7 @@ Shipped in this repository:
 - batch proof roots and inclusion proofs
 - CLI and SDK entrypoint
 - product website and protocol docs
+- release notes and runtime session fixture
 
 Verified locally:
 
@@ -230,6 +231,7 @@ Agent scout asserts that door is open based on camera 12 at 14:03 with 91% confi
 
 ## Docs
 
+- [Release Notes v0.1.0](./docs/release-notes-v0.1.0.md)
 - [POM Manifesto](./docs/manifesto.md)
 - [Whitepaper Lite](./docs/whitepaper-lite.md)
 - [Roadmap](./docs/roadmap.md)
